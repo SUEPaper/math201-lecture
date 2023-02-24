@@ -1,1 +1,5 @@
-slidev build --base '/math201/slides/python01' 
+
+npm install
+
+npm run build
+

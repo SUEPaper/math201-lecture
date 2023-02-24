@@ -1,1 +1,3 @@
-slidev build --base '/math201/slides/matplotlib' 
+npm install
+
+npm run build

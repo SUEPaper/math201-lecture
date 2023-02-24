@@ -1,1 +1,3 @@
-slidev build --base '/math201/slides/numpy' 
+npm install
+
+npm run build

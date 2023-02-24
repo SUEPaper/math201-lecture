@@ -2,7 +2,7 @@
   "name": "06-matplotlib-basic",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /math201/slides/matplotlib --out ../../math201/static/slides/matplotlib",
     "dev": "slidev --open",
     "export": "slidev export"
   },

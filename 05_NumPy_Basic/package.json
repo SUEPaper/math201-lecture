@@ -2,7 +2,7 @@
   "name": "05-numpy-basic",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /math201/slides/numpy --out ../../math201/static/slides/numpy",
     "dev": "slidev --open",
     "export": "slidev export"
   },

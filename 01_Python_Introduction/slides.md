@@ -12,7 +12,6 @@ drawings:
 transition: slide-left
 # use UnoCSS
 css: unocss
-download: true
 ---
 
 # 数值计算方法实训
@@ -30,9 +29,24 @@ download: true
   </a>
 </div>
 
+---
+
+<div abs-bl mx-14 my-12 flex flex-col>
+  <img src="/vue-conf.png" w-20 />
+  <div text-sm opacity-50>2022/12/10</div>
+</div>
+
+
+
+
+
 
 ---
 src: ./pages/course-infos.md
+---
+
+---
+src: ./pages/what.md
 ---
 
 ---

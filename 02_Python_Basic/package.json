@@ -2,7 +2,7 @@
   "name": "02-python-basic",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /math201/slides/python02 --out ../../math201/static/slides/python02",
     "dev": "slidev --open",
     "export": "slidev export"
   },

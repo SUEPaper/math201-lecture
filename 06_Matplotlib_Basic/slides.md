@@ -115,7 +115,7 @@ plt.show()
 
 # 图
 
-<img src = "matplotlib_01.svg" class = "h-90 mx-auto">
+<img src = "/matplotlib_01.svg" class = "h-90 mx-auto">
 
 ---
 
@@ -153,7 +153,7 @@ plt.show()
 
 # 红心图
 
-<img src = "matplotlib_02.svg" class = "h-90 mx-auto">
+<img src = "/matplotlib_02.svg" class = "h-90 mx-auto">
 
 ---
 
@@ -187,7 +187,7 @@ plt.show()
 
 # 创意红心图
 
-<img src = "matplotlib_03.svg" class = "h-90 mx-auto">
+<img src = "/matplotlib_03.svg" class = "h-90 mx-auto">
 
 ---
 
@@ -253,7 +253,7 @@ plt.show()
 # 多子图
 例：
 
-<img src = "matplotlib_04.svg" class = "h-90 mx-auto">
+<img src = "/matplotlib_04.svg" class = "h-90 mx-auto">
 
 ---
 
@@ -295,7 +295,7 @@ plt.show()
 
 # 3D螺旋线
 
-<img src = "matplotlib_05.svg" class = "h-90 mx-auto">
+<img src = "/matplotlib_05.svg" class = "h-90 mx-auto">
 
 ---
 
@@ -338,7 +338,7 @@ plt.show()
 
 # 三维曲面图
 
-<img src = "matplotlib_06.svg" class = "h-90 mx-auto">
+<img src = "/matplotlib_06.svg" class = "h-90 mx-auto">
 
 ---
 
