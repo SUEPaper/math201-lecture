@@ -1,45 +1,28 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
+theme: unicorn
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
 # some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
-  persist: false
+  persist: True
 # page transition
 transition: slide-left
 # use UnoCSS
 css: unocss
 ---
 
-# Welcome to Slidev
+# Matplotlib 基础
 
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
+Python绘图包
 
 <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+  <a href="https://github.com/SUEPaper/math201-lecture/tree/main" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -53,357 +36,313 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-# What is Slidev?
+# 什么是Matplotlib?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Matplotlib是建立在NumPy数组基础上的多平台数据可视化程序库，最初被设计用于完善SciPy的生态环境。Matplotlib最重要的特性之一就是具有良好的操作系统兼容性和图形显示底层接口兼容性(graphics backend)。Matplotlib支持几十种图形显示接口与输出格式，这使得用户无论在哪种操作系统上都可以输出自己想要的图形格式。这种跨平台、面面俱到的特点已经成为Matplotlib最强大的功能之一，Matplotlib也因此吸引了大量用户，进而形成了一个活跃的开发者团队，晋升为Python科学领域不可或缺的强大武器。
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+## 安装
 
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Here is another comment.
--->
-
----
-transition: slide-up
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Code
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
+```bash
+pip install matplotlib
 ```
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
 ---
 
-# Components
+# 语法
 
-<div grid="~ cols-2 gap-4">
-<div>
+基本语法
 
-You can use Vue components directly inside your slides.
+画x和y, 默认是线图
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
+```py
+plot(x,y)
 ```
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
+用于设置图像的名字
 
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
+```python
+plt.title()
 ```
 
-<Tweet id="1390115482657726468" scale="0.65" />
+用于设置X,Y轴的标签
 
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
+```python
+plt.xlabel()
+plt.ylabel()
 ```
 
-```yaml
 ---
-theme: seriph
----
+
+# 具体案例
+
+在同一窗口绘制如下2条曲线，并加标注。
+
+$y_1 = 2sinx,y_2 = 2cos(x^2),x \in [0,3\pi]$
+
+
+<div class="overflow-auto h-xs">
+
+```py
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+import matplotlib.pyplot as plt
+plt.rcParams["font.sans-serif"]=["SimHei"] #设置字体
+plt.rcParams["axes.unicode_minus"]=False #该语句解决图像中的“-”负号的乱码问题
+
+a = 0
+b = 3 * np.pi
+N = 500
+X = np.linspace(a,b,N)
+
+Y1 = 2 * np.sin(X)
+Y2 = np.cos(X**2)
+plt.plot(X, Y1, linestyle = "-", linewidth = 2, color = "red")
+plt.plot(X, Y2, linestyle = "--", linewidth = 2, color = "blue")
+plt.xlabel("time")
+plt.ylabel("振幅")
+plt.legend(['y=2sin(x)','y=2cos(x^2)'],loc = "upper right")
+plt.savefig("matplotlib_01.svg")
+plt.show()
+
 ```
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
 </div>
 
 ---
 
-# LaTeX
+# 图
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+<img src = "matplotlib_01.svg" class = "h-90 mx-auto">
 
-<br>
+---
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+# 参数方程绘图：红心
 
-Block
+参数方程
+
 $$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
+    \begin{cases}
+        x = 16sin^3(t)\\
+        y = 13cos(t) - 5cos(2t) - 2cos(3t) -  cos(4t)
+    \end{cases}
 $$
 
-<br>
+<div class="overflow-auto h-xs">
 
-[Learn more](https://sli.dev/guide/syntax#latex)
+```py
 
----
+import matplotlib.pyplot as plt
+import numpy as np
 
-# Diagrams
+t = np.linspace(0, 2 * np.pi, 200)
+x = 16 * np.sin(t) ** 3
+y = 13 * np.cos(t) - 5 * np.cos(2 * t) - 2 * np.cos(3 * t) - np.cos(4 * t)
+plt.plot(x,y,color = "red", linewidth = 1.5)
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+plt.show()
 
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
 ```
 
 </div>
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-src: ./pages/multiple-entries.md
-hide: false
 ---
 
----
-layout: center
-class: text-center
+
+# 红心图
+
+<img src = "matplotlib_02.svg" class = "h-90 mx-auto">
+
 ---
 
-# Learn More
+# 作业:绘制创意心
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+例：
+
+<div class="overflow-auto h-xs">
+
+```py
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+t = np.linspace(0, 2 * np.pi, 200)
+x = 16 * np.sin(t) ** 3
+y = 13 * np.cos(t) - 5 * np.cos(2 * t) - 2 * np.cos(3 * t) - np.cos(4 * t)
+plt.plot(x, y, color = "red", linewidth = 1.5)
+for scale in np.arange(0.2,0.8,0.2):
+    plt.plot(scale * x, scale * y, color = "red", linewidth = 1.5)
+# plt.plot(x + 8 , y, color = "red", linewidth = 1.5) # 向右平移
+plt.plot(x, -y, color = "red", linewidth = 1.5)
+
+plt.savefig("matplotlib_03.svg")
+plt.show()
+
+```
+</div>
+
+---
+
+# 创意红心图
+
+<img src = "matplotlib_03.svg" class = "h-90 mx-auto">
+
+---
+
+# 图形窗口的分割
+
+matplotlib.pyplot.subplot 方法
+
+该subplot()函数采用三个参数来描述图窗的布局。布局按行和列组织，由第一个 和第二个参数表示。第三个参数表示当前图的索引
+
+<div class="overflow-auto h-xs">
+
+```py
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.rcParams["font.sans-serif"]=["SimHei"] #设置字体
+plt.rcParams["axes.unicode_minus"]=False #该语句解决图像中的“-”负号的乱码问题
+
+
+t = np.arange(0.1, 2 * np.pi, 0.01)
+y = np.sin(t ** 2)
+
+plt.subplot(2,2,1)
+plt.plot(t, y, linewidth = 2, color = "blue")
+plt.title("sin")
+
+theta = np.linspace(0, 2*np.pi, 200)# 参数离散取点
+x0 = 2
+y0 = 1 # 椭圆中心
+a = 2
+b = 1 # 椭圆长短轴半径
+x = x0 + a * np.cos(theta)
+y = y0 + b * np.sin(theta)
+
+plt.subplot(2,2,2)
+plt.plot(x, y, linewidth = 2, color = "red")
+plt.title("椭圆") # 子图标题
+
+x = np.linspace(1, 0.01, 5)
+y = np.exp(x)
+
+plt.subplot(2,2,3)
+plt.plot(x, y, linewidth = 2)
+plt.title("exp")
+
+x = np.linspace(1, 0.1, 10)
+y = np.sqrt(x)
+
+plt.subplot(2,2,4)
+plt.plot(x, y, linewidth = 2)
+plt.title("sqrt")
+
+plt.suptitle("分窗口绘制子图")#图的总标题
+
+plt.show()
+
+```
+</div>
+
+---
+
+# 多子图
+例：
+
+<img src = "matplotlib_04.svg" class = "h-90 mx-auto">
+
+---
+
+# 3D图像
+Matplotlib 可以支持绘制3D的图形，通过关键字参数projection='3d'来创建3D视图, 三维 axes 激活后，我们可以在上面绘制不同的三维图表类型。
+
+<div class="overflow-auto h-xs">
+
+```py
+
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+
+plt.rcParams["font.sans-serif"]=["SimHei"] #设置字体
+plt.rcParams["axes.unicode_minus"]=False #该语句解决图像中的“-”负号的乱码问题
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+t = np.arange(0, 8 * np.pi, 0.1)
+X = np.sin(t)
+Y = np.cos(t)
+Z = t
+
+ax.plot(X, Y, Z)
+ax.set_title('绘制螺旋线')
+
+ax.set_xlabel('sin(t)')
+ax.set_ylabel('cos(t)')
+
+plt.savefig("matplotlib_05.svg")
+plt.show()
+
+```
+</div>
+
+---
+
+# 3D螺旋线
+
+<img src = "matplotlib_05.svg" class = "h-90 mx-auto">
+
+---
+
+# 三维曲面绘图
+
+meshgrid()
+首先是平面网格点的生成 函数命令meshgrid() 用来生成 x-y 平面上的网格点矩阵。 调用形式
+为：X, Y = np.meshgrid(x, y)
+
+<div class="overflow-auto h-xs">
+
+```py
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+
+def f(x, y):
+    return np.sin(np.sqrt(x ** 2 + y ** 2))
+
+x = np.linspace(-6, 6, 30)
+y = np.linspace(-6, 6, 30)
+
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+ax.contour3D(X, Y, Z, 50, cmap='binary')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+
+plt.show()
+
+```
+</div>
+
+---
+
+# 三维曲面图
+
+<img src = "matplotlib_06.svg" class = "h-90 mx-auto">
+
+---
+
+# 其他种类绘图
+
+详见：
+[课程网站](https://suepaper.github.io/math201/docs/category/matplotlib%E6%95%99%E7%A8%8B)
+[matplotlib官网](https://matplotlib.org/stable/index.html)
