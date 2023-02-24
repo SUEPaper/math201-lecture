@@ -29,3 +29,25 @@ css: unocss
   </a>
 </div>
 
+---
+src: ./pages/variables.md
+---
+
+---
+src: ./pages/expressions.md
+---
+
+---
+src: ./pages/conditional.md
+---
+
+---
+src: ./pages/loop.md
+---
+
+---
+layout: center
+class: text-center
+---
+
+Thanks

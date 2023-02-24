@@ -12,6 +12,7 @@ drawings:
 transition: slide-left
 # use UnoCSS
 css: unocss
+download: true
 ---
 
 # 数值计算方法实训
