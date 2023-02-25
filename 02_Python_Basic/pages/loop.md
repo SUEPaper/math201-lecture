@@ -5,33 +5,88 @@ layout: center
 # 循环
 
 ---
+layout: full
+---
 
 # while 循环
 
-<div class="grid grid-cols-2 justify-center gap-10 pt-4 mb-6 ">
+The while loop syntax:
 
 ```py
-
-n = 5
-while n > 0 :
-    print('Lather')
-    print('Rinse')
-print('Dry off!')
-
-
+while <condition>:
+    <statement>
+    <statement>
 ```
 
+As long as the condition is true, the statements below it are executed.
 
-```mermaid {theme: 'neutral'}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-
+```py
+multiplier = 1
+while multiplier <= 5:
+    print(9 * multiplier)
+    multiplier += 1
 ```
 
-</div>
+The code is significantly shorter, and it can easily be extended to loop for more or less iterations.
 
+---
+layout: full
+---
+
+# Using a counter variable
+
+It's common to use a counter variable whose job is keeping track of the number of iterations.
+
+```py
+total = 0
+counter = 0
+while counter < 5:
+  total += pow(2, 1)
+  counter += 1
+```
+
+The counter variable may also be involved in the loop computation:
+
+```py
+total = 0
+counter = 0
+while counter < 5:
+  total += pow(2, counter)
+  counter += 1
+```
+
+---
+layout: full
+---
+
+# Beware infinite loops
+
+Uh oh..
+
+```py
+counter = 1
+while counter < 5:
+    total += pow(2, counter)
+```
+
+What one line of code would fix this?
+
+`counter += 1`
+
+```py
+counter = 6
+while counter > 5:
+  total += pow(2, counter)
+  counter += 1
+```
+
+How do we save this code?
+
+Intentions are unclear! Change the initial value and condition?
+
+
+---
+layout: full
 ---
 
 # break
@@ -49,6 +104,8 @@ while True:
 print('Done!')
 
 ```
+---
+layout: full
 ---
 
 # continue
@@ -69,6 +126,8 @@ print('Done!')
 
 ```
 
+---
+layout: full
 ---
 
 # for loop 循环

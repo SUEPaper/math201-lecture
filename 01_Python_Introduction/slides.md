@@ -23,23 +23,15 @@ css: unocss
 #### 邓化宇
 
 <div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/SUEPaper/math201-lecture/tree/main" target="_blank" alt="GitHub"
+  <a href="https://suepaper.github.io/math201/" target="_blank" alt="GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:application-web />
+  </a>
+  <a href="https://github.com/SUEPaper/math201-lecture/" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
 </div>
-
----
-
-<div abs-bl mx-14 my-12 flex flex-col>
-  <img src="/vue-conf.png" w-20 />
-  <div text-sm opacity-50>2022/12/10</div>
-</div>
-
-
-
-
-
 
 ---
 src: ./pages/course-infos.md
@@ -62,4 +54,4 @@ layout: center
 class: text-center
 ---
 
-Thanks
+# Thanks

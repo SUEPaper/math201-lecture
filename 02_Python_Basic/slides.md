@@ -1,6 +1,7 @@
 ---
 theme: unicorn
-class: 'text-center'
+# class: 'text-center'
+layout: cover
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
@@ -23,7 +24,11 @@ css: unocss
 #### 邓化宇
 
 <div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/SUEPaper/math201-lecture/tree/main" target="_blank" alt="GitHub"
+  <a href="https://suepaper.github.io/math201/" target="_blank" alt="GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:application-web />
+  </a>
+  <a href="https://github.com/SUEPaper/math201-lecture/" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -50,4 +55,4 @@ layout: center
 class: text-center
 ---
 
-Thanks
+# Thanks
