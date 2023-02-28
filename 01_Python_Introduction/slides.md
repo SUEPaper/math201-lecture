@@ -1,5 +1,6 @@
 ---
-theme: unicorn
+# theme: unicorn
+theme: seriph
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
