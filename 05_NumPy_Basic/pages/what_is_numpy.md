@@ -17,7 +17,7 @@ layout: center -->
 ---
 
 # 1. NumPy 速查手册
-<!-- <img src = "matplotlib_02.svg" class = "h-90 mx-auto"> -->
+<img src = "numpy-cheat-sheet.svg" class = "h-90 mx-auto">
 
 <!-- ---
 layout: center -->
@@ -50,7 +50,7 @@ print(a)
 
 ---
 
-![](./public/numpy-02.png)
+<img src = "numpy-02.png" class = "h-90 mx-auto">
 
 ---
 layout: center
@@ -65,6 +65,7 @@ layout: center
    
 ---
 
+<img src = "numpy-03.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-03.png) -->
 
 ---

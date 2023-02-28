@@ -16,6 +16,7 @@ layout: center
 
 最简单的广播示例是n维数组乘以标量，这显然意味着该数组的所有元素乘以标量值：
 
+<img src = "numpy-broadcast-01.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-01.png) -->
 
 ---
@@ -25,6 +26,7 @@ layout: center
 广播类似于众所周知的**类型提升**：在大多数编程语言中，一个整数和一个浮点数进行运算时，整数会首先自动转换为浮点数类型。
 
 在二维数组中（例如，将矩阵除以向量），广播有点棘手，因为操作的结果取决于操作数的特定形状：
+<img src = "numpy-broadcast-02.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-02.png) -->
 
 ---
@@ -32,6 +34,7 @@ layout: center
 ## 三维数组的广播
 
 在三维数组及更高维度的数组中，广播甚至更不直观，使用它需要了解通用形式的广播规则。
+<img src = "numpy-broadcast-03.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-03.png) -->
 
 ---
@@ -44,6 +47,7 @@ layout: center
 来源于 -- [《Python Data Science Handbook》](https://www.oreilly.com/library/view/python-data-science/9781491912126/)
 
 根据规则之前三维数组的案例可解释如下：
+<img src = "numpy-broadcast-04.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-04.png) -->
 
 为了更清楚地理解这些规则，来看几个具体的示例。
@@ -217,5 +221,6 @@ imsave('logo-gray.png', b, cmap='gray')
 
 执行灰度操作以后的效果：
 
+<img src = "numpy-broadcast-05.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-05.png) -->
 
