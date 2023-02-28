@@ -1,5 +1,6 @@
 ---
-theme: unicorn
+# theme: unicorn
+theme: seriph
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
@@ -28,3 +29,25 @@ css: unocss
     <carbon-logo-github />
   </a>
 </div>
+
+
+
+---
+src: ./pages/what_is_numpy.md
+---
+
+---
+src: ./pages/vector.md
+---
+
+---
+src: ./pages/matrix.md
+---
+
+---
+src: ./pages/tensor.md
+---
+
+---
+src: ./pages/broadcast.md
+---
