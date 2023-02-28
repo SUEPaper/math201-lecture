@@ -30,11 +30,6 @@ css: unocss
   </a>
 </div>
 
-
----
-src: ./pages/course-infos.md
----
-
 ---
 src: ./pages/why.md
 ---
