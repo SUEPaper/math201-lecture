@@ -40,7 +40,7 @@ plt.show()
 
 # 红心图
 
-<img src = "matplotlib_02.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_02.png" class = "h-90 mx-auto">
 
 ---
 
@@ -74,4 +74,4 @@ plt.show()
 
 # 创意红心图
 
-<img src = "matplotlib_03.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_03.png" class = "h-90 mx-auto">

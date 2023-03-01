@@ -16,7 +16,7 @@ layout: center
 
 最简单的广播示例是n维数组乘以标量，这显然意味着该数组的所有元素乘以标量值：
 
-<img src = "numpy-broadcast-01.png" class = "h-90 mx-auto">
+<img src = "/numpy-broadcast-01.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-01.png) -->
 
 ---
@@ -26,7 +26,7 @@ layout: center
 广播类似于众所周知的**类型提升**：在大多数编程语言中，一个整数和一个浮点数进行运算时，整数会首先自动转换为浮点数类型。
 
 在二维数组中（例如，将矩阵除以向量），广播有点棘手，因为操作的结果取决于操作数的特定形状：
-<img src = "numpy-broadcast-02.png" class = "h-90 mx-auto">
+<img src = "/numpy-broadcast-02.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-02.png) -->
 
 ---
@@ -34,7 +34,7 @@ layout: center
 ## 三维数组的广播
 
 在三维数组及更高维度的数组中，广播甚至更不直观，使用它需要了解通用形式的广播规则。
-<img src = "numpy-broadcast-03.png" class = "h-90 mx-auto">
+<img src = "/numpy-broadcast-03.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-03.png) -->
 
 ---
@@ -47,7 +47,7 @@ layout: center
 来源于 -- [《Python Data Science Handbook》](https://www.oreilly.com/library/view/python-data-science/9781491912126/)
 
 根据规则之前三维数组的案例可解释如下：
-<img src = "numpy-broadcast-04.png" class = "h-90 mx-auto">
+<img src = "/numpy-broadcast-04.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-broadcast-04.png) -->
 
 为了更清楚地理解这些规则，来看几个具体的示例。
@@ -182,45 +182,4 @@ ValueError: operands could not be broadcast together with shapes (3,2) (3,)
 
 **你可能想通过在a数组的右边补1，而不是左边补1，让a和M的维度变得兼容。但是这不被广播的规则所允许。**
 
----
-
-# 3. 实际案例
-
-将彩色图像转换为灰度图像是三维数组广播的一个很好的例子。根据sRGB颜色空间的公式：
-
-$$
-Y_{linear} = 0.2126 \times R_{linear} + 0.7152 \times G_{linear} + 0.0722 \times B_{linear}
-$$
-
-可以通过图像颜色通道的线性组合获得亮度。使用广播的策略，代码可以写成如下：
-```python
-gray = np.sum(im*[0.2126, 0.7152, 0.0722], axis=2)
-```
-其中 im 是一张RGB标准图片的数组值，
-
->im.shape == (1080, 1920, 3)
-
->gray.shape == (1080, 1920)
-
-1080是图片的高度， 1920是图片的宽度，3是图片RGB的三个通道。
-(关于图片的格式，请阅读[图像格式RGB/HSV/YUV](https://zhuanlan.zhihu.com/p/95952096))
-
----
-
-完整代码如下：
-
-```python showLineNumbers
-import numpy as np
-from matplotlib.pyplot import imread, imsave
-
-a = imread('python-logo.png')
-b = np.sum(a*[0.2126, 0.7152, 0.0722], axis=2)
-imsave('logo-gray.png', b, cmap='gray')
-```
-原始图片地址：http://openastronomy.org/pyastro/logo/
-
-执行灰度操作以后的效果：
-
-<img src = "numpy-broadcast-05.png" class = "h-90 mx-auto">
-<!-- ![](./img/numpy-broadcast-05.png) -->
 

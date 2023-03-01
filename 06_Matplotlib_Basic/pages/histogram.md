@@ -30,7 +30,7 @@ plt.show()
 
 ---
 
-<img src = "hist_01.png" class = "h-90 mx-auto">
+<img src = "/hist_01.png" class = "h-90 mx-auto">
 
 ---
 
@@ -58,7 +58,7 @@ plt.show()
 
 ---
 
-<img src = "hist_02.png" class = "h-90 mx-auto">
+<img src = "/hist_02.png" class = "h-90 mx-auto">
 
 ---
 
@@ -81,7 +81,7 @@ plt.show()
 
 ---
 
-<img src = "hist_03.png" class = "h-90 mx-auto">
+<img src = "/hist_03.png" class = "h-90 mx-auto">
 
 ---
 
@@ -106,7 +106,7 @@ plt.show()
 
 ---
 
-<img src = "hist_04.png" class = "h-90 mx-auto">
+<img src = "/hist_04.png" class = "h-90 mx-auto">
 
 ---
 
@@ -130,4 +130,4 @@ plt.show()
 
 ---
 
-<img src = "hist_05.png" class = "h-90 mx-auto">
+<img src = "/hist_05.png" class = "h-90 mx-auto">

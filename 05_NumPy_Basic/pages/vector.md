@@ -4,50 +4,35 @@ layout: center
 
 # 2. 向量(Vector): 一维数组
 
-本文参考: 
-
-1. [NumPy Illustrated: The Visual Guide to NumPy](https://betterprogramming.pub/numpy-illustrated-the-visual-guide-to-numpy-3b1d4976de1d)
-2. [A Visual Intro to NumPy and Data Representation](https://jalammar.github.io/visual-numpy/)
-3. [《Python Data Science Handbook》](https://www.oreilly.com/library/view/python-data-science/9781491912126/)
-
-向量在NumPy中用一维数组表示。
-
 ---
 
 # 1. 向量初始化
 
 通过Python列表可以创建NumPy数组，如下将列表元素转化为一维数组：
-<img src = "numpy-04.png" class = "h-90 mx-auto">
-
-<!-- ![](./img/numpy-04.png) -->
+<img src = "/numpy-04.png" class = "h-90 mx-auto">
 
 注意，确保列表元素类型相同，否则dtype=’object'，将影响运算甚至产生语法错误。
 
 由于在数组末尾没有预留空间以快速添加新元素，NumPy数组无法像Python列表那样增长，因此，通常的做法是在变长Python列表中准备好数据，然后将其转换为NumPy数组，或是使用np.zeros或np.empty预先分配必要的空间：
-<img src = "numpy-05.png" class = "h-90 mx-auto">
-
-<!-- ![](./img/numpy-05.png) -->
+<img src = "/numpy-05.png" class = "h-90 mx-auto">
 
 通过以下方法可以创建一个与某一变量形状一致的空数组：
-<img src = "numpy-07.png" class = "h-90 mx-auto">
+<img src = "/numpy-07.png" class = "h-90 mx-auto">
 
-<!-- ![](./img/numpy-07.png) -->
 
 ---
 
 ## 初始化
 不止是空数组，通过上述方法还可以将数组填充为特定值：
-<img src = "numpy-08.png" class = "h-90 mx-auto">
+<img src = "/numpy-08.png" class = "h-90 mx-auto">
 
-<!-- ![](./img/numpy-08.png) -->
 
 ---
 
 ## 初始化
 在NumPy中，还可以通过单调序列初始化数组：
-<img src = "numpy-09.png" class = "h-90 mx-auto">
+<img src = "/numpy-09.png" class = "h-90 mx-auto">
 
-<!-- ![](./img/numpy-09.png) -->
 
 ---
 
@@ -58,9 +43,7 @@ layout: center
 
 ## 初始化
 arange浮点类型数据不是非常友好：
-<img src = "numpy-10.png" class = "h-90 mx-auto">
-
-<!-- ![](./img/numpy-10.png) -->
+<img src = "/numpy-10.png" class = "h-90 mx-auto">
 
 ---
 
@@ -71,7 +54,7 @@ arange浮点类型数据不是非常友好：
 
 ## 随机数
 随机数组的生成如下：
-<img src = "numpy-11.png" class = "h-90 mx-auto">
+<img src = "/numpy-11.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-11.png) -->
 
@@ -85,18 +68,14 @@ There’s also a new interface for random arrays generation. It is:
 - able to pass two tricky synthetic tests that the old version fails.
 
 ---
-<img src = "numpy-12.png" class = "h-90 mx-auto">
-
-<!-- ![New-style random numbers generation](./img/numpy-12.png) -->
-
+<img src = "/numpy-12.png" class = "h-90 mx-auto">
 ---
 
 # 2.向量索引
 
 对于数组数据的访问，numpy提供了便捷的访问方式：
-<img src = "numpy-13.png" class = "h-90 mx-auto">
+<img src = "/numpy-13.png" class = "h-90 mx-auto">
 
-<!-- ![](./img/numpy-13.png) -->
 
 ---
 
@@ -104,15 +83,14 @@ There’s also a new interface for random arrays generation. It is:
 上图中，除“fancy indexing”外，其他所有索引方法本质上都是`views`：它们并不存储数据，如果原数组在被索引后发生更改，则会反映出原始数组中的更改。
 
 上述所有这些方法都可以改变原始数组，即允许通过分配新值改变原数组的内容。这导致无法通过切片来复制数组：
-<img src = "numpy-14.png" class = "h-90 mx-auto">
+<img src = "/numpy-14.png" class = "h-90 mx-auto">
 
-<!-- ![](./img/numpy-14.png) -->
 
 ---
 
 ## 切片操作
 Also, such assignments must not change the size of the array, so tricks like
-<img src = "numpy-15.png" class = "h-90 mx-auto">
+<img src = "/numpy-15.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-15.png) -->
 won’t work in NumPy — use np.insert, np.append, etc. instead (described in the “2D” section below).
@@ -121,7 +99,7 @@ won’t work in NumPy — use np.insert, np.append, etc. instead (described in t
 
 ## 布尔索引
 此外，还可以通过布尔索引从NumPy数组中获取数据，这意味着可以使用各种逻辑运算符：
-<img src = "numpy-16.png" class = "h-90 mx-auto">
+<img src = "/numpy-16.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-16.png) -->
 
@@ -131,7 +109,7 @@ won’t work in NumPy — use np.insert, np.append, etc. instead (described in t
 
 ## 布尔索引
 如上所述，布尔索引是可写的。如下图np.where和np.clip两个专有函数。
-<img src = "numpy-17.png" class = "h-90 mx-auto">
+<img src = "/numpy-17.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-17.png) -->
 
@@ -140,7 +118,7 @@ won’t work in NumPy — use np.insert, np.append, etc. instead (described in t
 # 3.向量操作
 
 NumPy的计算速度是其亮点之一，其向量运算操作接近C++级别，避免了Python循环耗时较多的问题。NumPy允许像普通数字一样操作整个数组：
-<img src = "numpy-18.png" class = "h-90 mx-auto">
+<img src = "/numpy-18.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-18.png) -->
 
@@ -148,7 +126,7 @@ NumPy的计算速度是其亮点之一，其向量运算操作接近C++级别，
 
 ## 浮点运算
 浮点数的计算也是如此，numpy能够将标量广播到数组：
-<img src = "numpy-19.png" class = "h-90 mx-auto">
+<img src = "/numpy-19.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-19.png) -->
 
@@ -156,7 +134,7 @@ NumPy的计算速度是其亮点之一，其向量运算操作接近C++级别，
 
 ## 数学函数
 numpy提供了许多数学函数来处理矢量：
-<img src = "numpy-20.png" class = "h-90 mx-auto">
+<img src = "/numpy-20.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-20.png) -->
 
@@ -164,7 +142,7 @@ numpy提供了许多数学函数来处理矢量：
 
 ## 向量运算
 向量点乘（内积）和叉乘（外积、向量积）如下：
-<img src = "numpy-21.png" class = "h-90 mx-auto">
+<img src = "/numpy-21.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-21.png) -->
 
@@ -172,7 +150,7 @@ numpy提供了许多数学函数来处理矢量：
 
 ## 三角函数
 numpy也提供了如下三角函数运算：
-<img src = "numpy-22.png" class = "h-90 mx-auto">
+<img src = "/numpy-22.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-22.png) -->
 
@@ -180,7 +158,7 @@ numpy也提供了如下三角函数运算：
 
 ## 舍入
 数组整体进行四舍五入：
-<img src = "numpy-23.png" class = "h-90 mx-auto">
+<img src = "/numpy-23.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-23.png) -->
 
@@ -194,7 +172,7 @@ np.around与np.round是等效的，这样做只是为了避免 from numpy import
 
 ## 最大最小值等
 numpy还可以实现以下功能：
-<img src = "numpy-24.png" class = "h-90 mx-auto">
+<img src = "/numpy-24.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-24.png) -->
 
@@ -203,7 +181,7 @@ numpy还可以实现以下功能：
 <!-- TODO: 不确定 -->
 ## 算数平均
 As you can see from the formula above, both std and var ignore Bessel’s correction and give a biased result in the most typical use case of estimating std from a sample when the population mean is unknown. The standard approach to get a less biased estimation is to have n-1 in the denominator, which is done with ddof=1 (‘delta degrees of freedom’):
-<img src = "numpy-25.png" class = "h-90 mx-auto">
+<img src = "/numpy-25.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-25.png) -->
 
@@ -211,7 +189,7 @@ As you can see from the formula above, both std and var ignore Bessel’s correc
 
 <!-- TODO: 不确定 -->
 The effect of the Bessel’s correction quickly diminishes with increasing sample size. Also, it is not a one-size-fits-all solution, e.g. for the normal distribution ddof=1.5 is better:
-<img src = "numpy-26.png" class = "h-90 mx-auto">
+<img src = "/numpy-26.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-26.png) -->
 
@@ -219,7 +197,7 @@ The effect of the Bessel’s correction quickly diminishes with increasing sampl
 
 # 排序
 在numpy中，排序函数功能有所阉割：
-<img src = "numpy-27.png" class = "h-90 mx-auto">
+<img src = "/numpy-27.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-27.png) -->
 
@@ -230,7 +208,7 @@ The effect of the Bessel’s correction quickly diminishes with increasing sampl
 # 4.查找向量中的元素
 
 不同于Python列表，NumPy数组没有索引方法。
-<img src = "numpy-28.png" class = "h-90 mx-auto">
+<img src = "/numpy-28.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-28.png) -->
 
@@ -249,7 +227,7 @@ The effect of the Bessel’s correction quickly diminishes with increasing sampl
 # 5.浮点数比较
 
 np.allclose(a, b)用于容忍误差之内的浮点数比较。
-<img src = "numpy-29.png" class = "h-90 mx-auto">
+<img src = "/numpy-29.png" class = "h-90 mx-auto">
 
 <!-- ![](./img/numpy-29.png) -->
 

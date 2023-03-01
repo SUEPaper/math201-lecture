@@ -28,7 +28,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_11.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_11.png" class = "h-90 mx-auto">
 
 ---
 
@@ -37,7 +37,7 @@ matplotlib.pyplot 的 matplotlib.pyplot.plot(*args, **kwargs) 方法用于绘制
 
 ### 风格
 
-<img src = "linestyles.png" class = "h-20 mx-auto">
+<img src = "/linestyles.png" class = "h-20 mx-auto">
 
 <font size = 2>
 
@@ -86,7 +86,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_12.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_12.png" class = "h-90 mx-auto">
 
 ---
 
@@ -127,7 +127,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_13.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_13.png" class = "h-90 mx-auto">
 
 ---
 
@@ -147,7 +147,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_14.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_14.png" class = "h-90 mx-auto">
 
 ---
 
@@ -172,7 +172,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_15.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_15.png" class = "h-90 mx-auto">
 
 ---
 
@@ -203,7 +203,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_16.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_16.png" class = "h-90 mx-auto">
 
 ---
 
@@ -233,7 +233,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_17.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_17.png" class = "h-90 mx-auto">
 
 ---
 
@@ -262,7 +262,7 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_18.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_18.png" class = "h-90 mx-auto">
 
 ---
 
@@ -284,4 +284,4 @@ plt.show()
 
 ---
 
-<img src = "matplotlib_19.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_19.png" class = "h-90 mx-auto">
