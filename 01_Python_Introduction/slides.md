@@ -1,11 +1,12 @@
 ---
 theme: unicorn
-class: 'text-center'
+# theme: seriph
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
 # some information about the slides, markdown enabled
+layout: cover
 drawings:
   persist: True
 # page transition

@@ -1,11 +1,12 @@
 ---
 theme: unicorn
-class: 'text-center'
+# theme: seriph
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
 # some information about the slides, markdown enabled
+layout: cover
 drawings:
   persist: True
 # page transition
@@ -33,3 +34,28 @@ css: unocss
   </a>
 </div>
 
+---
+src: ./pages/what_is_numpy.md
+---
+
+---
+src: ./pages/vector.md
+---
+
+---
+src: ./pages/matrix.md
+---
+
+---
+src: ./pages/tensor.md
+---
+
+---
+src: ./pages/broadcast.md
+---
+
+---
+layout: center
+---
+
+# Thanks

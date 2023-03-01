@@ -44,9 +44,9 @@ transition: slide-left
 
 <v-clicks>
 
-* <span class="color-rose-600 font-bold">不将代码上传到互联网</span>
-* <span class="color-rose-600 font-bold">主动不参考别人完成的实验代码</span>
-* <span class="color-rose-600 font-bold">不使用他人测试用例(depends)</span>
+* <b text-orange>不将代码上传到互联网</b>
+* <b text-orange>主动不参考别人完成的实验代码</b>
+* <b text-orange>不使用他人测试用例(depends)</b>
 
 </v-clicks>
 
