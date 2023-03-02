@@ -1,6 +1,6 @@
 ---
-theme: unicorn
-# theme: seriph
+# theme: unicorn
+theme: seriph
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
@@ -35,10 +35,6 @@ css: unocss
 </div>
 
 ---
-src: ./pages/what_is_numpy.md
----
-
----
 src: ./pages/vector.md
 ---
 
@@ -54,8 +50,4 @@ src: ./pages/tensor.md
 src: ./pages/broadcast.md
 ---
 
----
-layout: center
----
 
-# Thanks

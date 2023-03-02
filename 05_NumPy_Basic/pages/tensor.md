@@ -20,7 +20,7 @@ layout: center
 通过上述索引顺序，可以方便的保留灰度图像，a[i]表示第i个图像。
 
 但这样的索引顺序并不具有广泛性，例如在处理RGB图像时，通常使用(y,x,z)顺序：首先是两个像素坐标，然后才是颜色坐标（Matplotlib中的RGB，OpenCV中的BGR）：
-<img src = "/numpy-64.png" class = "h-90 mx-auto">
+<img src = "/numpy-64.png" class = "h-70 mx-auto">
 
 <!-- ![](./img/numpy-64.png) -->
 
@@ -31,7 +31,7 @@ layout: center
 这样可以方便地定位特定像素，如a[i,j]给出像素(i,j)的RGB元组。
 
 因此，几何形状的创建实际取决于你对域的约定：
-<img src = "/numpy-65.png" class = "h-90 mx-auto">
+<img src = "/numpy-65.png" class = "h-70 mx-auto">
 
 <!-- ![](./img/numpy-65.png) -->
 
@@ -58,7 +58,7 @@ layout: center
 ## 数组转置
 
 如果不考虑轴数，可以将数组转换hstack和相应形式：
-<img src = "/numpy-68.png" class = "h-90 mx-auto">
+<img src = "/numpy-68.png" class = "h-70 mx-auto">
 
 这种转换非常方便，该过程只是混合索引的顺序重排，并没有实际的复制操作。
 
@@ -67,7 +67,7 @@ layout: center
 ## 数组转置
 
 通过混合索引顺序可实现数组转置，掌握该方法将加深你对3维数据的了解。根据确定的轴顺序，转置数组平面的命令有所不同：对于通用数组，交换索引1和2，对于RGB图像交换0和1：
-<img src = "/numpy-69.png" class = "h-90 mx-auto">
+<img src = "/numpy-69.png" class = "h-70 mx-auto">
 
 <!-- ![](./img/numpy-69.png) -->
 
@@ -80,7 +80,7 @@ layout: center
 ## einsum
 
 最后介绍einsum(Einstein summation)函数，这将使你在处理多维数组时避免很多Python循环，代码更为简洁：
-<img src = "/numpy-70.png" class = "h-90 mx-auto">
+<img src = "/numpy-70.png" class = "h-40 mx-auto">
 
 <!-- ![](./img/numpy-70.png) -->
 
