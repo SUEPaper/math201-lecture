@@ -23,7 +23,7 @@ plt.show()
 
 ---
 
-<img src = "bar_01.png" class = "h-90 mx-auto">
+<img src = "/bar_01.png" class = "h-90 mx-auto">
 
 ---
 
@@ -47,7 +47,7 @@ plt.show()
 
 ---
 
-<img src = "bar_02.png" class = "h-90 mx-auto">
+<img src = "/bar_02.png" class = "h-90 mx-auto">
 
 ---
 
@@ -69,7 +69,7 @@ plt.show()
 
 ---
 
-<img src = "bar_03.png" class = "h-90 mx-auto">
+<img src = "/bar_03.png" class = "h-90 mx-auto">
 
 ---
 
@@ -99,13 +99,14 @@ plt.show()
 
 ---
 
-<img src = "bar_04.png" class = "h-90 mx-auto">
+<img src = "/bar_04.png" class = "h-90 mx-auto">
 
 ---
 
 # 多个条形图
 
-<div class="overflow-auto h-xs">    
+<div class="overflow-auto h-xs">   
+ 
 ```python
 
 import matplotlib.pyplot as plt
@@ -143,8 +144,9 @@ plt.legend()
 plt.show()
 
 ```
+
 </div>
 
 ---
 
-<img src = "bar_05.png" class = "h-90 mx-auto">
+<img src = "/bar_05.png" class = "h-90 mx-auto">

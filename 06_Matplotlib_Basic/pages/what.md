@@ -85,4 +85,4 @@ plt.show()
 
 # 图
 
-<img src = "matplotlib_01.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_01.png" class = "h-90 mx-auto">

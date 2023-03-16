@@ -25,13 +25,13 @@ plt.show()
 
 ---
 
-<img src = "scatter_01.png" class = "h-90 mx-auto">
+<img src = "/scatter_01.png" class = "h-90 mx-auto">
 
 ---
 
 `plot`支持不同散点的类型，如下案例所示。详细说明请看[MarkrStyle](https://matplotlib.org/stable/api/_as_gen/matplotlib.markers.MarkerStyle.html)说明文档。
 
-<img src = "marks.png" class = "h-40 mx-auto">
+<img src = "/marks.png" class = "h-40 mx-auto">
 
 ```python
 from matplotlib import pyplot as plt
@@ -49,7 +49,7 @@ plt.show()
 
 ---
 
-<img src = "scatter_02.png" class = "h-90 mx-auto">
+<img src = "/scatter_02.png" class = "h-90 mx-auto">
 
 ---
 
@@ -70,7 +70,7 @@ plt.show()
 ---
 
 
-<img src = "scatter_03.png" class = "h-90 mx-auto">
+<img src = "/scatter_03.png" class = "h-90 mx-auto">
 
 ---
 
@@ -94,7 +94,7 @@ plt.show()
 
 ---
 
-<img src = "scatter_04.png" class = "h-90 mx-auto">
+<img src = "/scatter_04.png" class = "h-90 mx-auto">
 
 ---
 
@@ -123,7 +123,7 @@ plt.show()
 
 ---
 
-<img src = "scatter_05.png" class = "h-90 mx-auto">
+<img src = "/scatter_05.png" class = "h-90 mx-auto">
 
 ---
 
@@ -153,7 +153,7 @@ plt.show()
 
 ---
 
-<img src = "scatter_06.png" class = "h-90 mx-auto">
+<img src = "/scatter_06.png" class = "h-90 mx-auto">
 
 ---
 

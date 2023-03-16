@@ -2,13 +2,15 @@
   "name": "05-numpy-basic",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /math201/slides/numpy --out ../../math201/static/slides/numpy",
     "dev": "slidev --open",
     "export": "slidev export"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",
-    "@slidev/theme-seriph": "^0.21.3",
-    "slidev-theme-unicorn": "^1.1.1"
+    "@slidev/theme-seriph": "^0.21.3"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.1.23"
   }
 }

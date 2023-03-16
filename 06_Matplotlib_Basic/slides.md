@@ -1,12 +1,12 @@
 ---
-# theme: unicorn
-theme: seriph
-class: 'text-center'
+theme: unicorn
+# theme: seriph
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
 # some information about the slides, markdown enabled
+layout: cover
 drawings:
   persist: True
 # page transition
@@ -24,7 +24,11 @@ css: unocss
 #### 邓化宇
 
 <div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/SUEPaper/math201-lecture/tree/main" target="_blank" alt="GitHub"
+  <a href="https://suepaper.github.io/math201/" target="_blank" alt="GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:application-web />
+  </a>
+  <a href="https://github.com/SUEPaper/math201-lecture/" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -71,3 +75,9 @@ src: ./pages/3D_plot.md
 详见：
 [课程网站](https://suepaper.github.io/math201/docs/category/matplotlib%E6%95%99%E7%A8%8B)
 [matplotlib官网](https://matplotlib.org/stable/index.html)
+
+---
+layout: center
+---
+
+# Thanks

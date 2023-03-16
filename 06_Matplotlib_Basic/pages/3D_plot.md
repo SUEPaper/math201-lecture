@@ -36,7 +36,7 @@ plt.show()
 
 # 3D螺旋线
 
-<img src = "matplotlib_05.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_05.png" class = "h-90 mx-auto">
 
 ---
 
@@ -79,6 +79,6 @@ plt.show()
 
 # 三维曲面图
 
-<img src = "matplotlib_06.png" class = "h-90 mx-auto">
+<img src = "/matplotlib_06.png" class = "h-90 mx-auto">
 
 ---
