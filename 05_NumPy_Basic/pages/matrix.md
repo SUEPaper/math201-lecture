@@ -16,30 +16,10 @@ layout: center
 
 ---
 
-## 随机矩阵
-
-随机矩阵的生成也与向量类似：
-<img src = "/numpy-31.png" class = "h-80 mx-auto">
-
-<!-- ![](./img/numpy-31.png) -->
-
----
-
-## 随机矩阵
-
-The ubiquitous double parentheses found their way to the interface of the new-style (see details in the 1D section above) numbers generation routines so that as of today only in np.eye has beauty taken prevelence over stringency and convenience of passing shapes as is:
-<img src = "/numpy-32.png" class = "h-70 mx-auto">
-
-<!-- ![](./img/numpy-32.png) -->
-
----
-
 ## 索引
 
 二维数组的索引语法要比嵌套列表更方便：
 <img src = "/numpy-33.png" class = "h-70 mx-auto">
-
-<!-- ![](./img/numpy-33.png) -->
 
 “view”表示数组切片时并未进行任何复制，在修改数组后，相应更改也将反映在切片中。
 
@@ -81,13 +61,6 @@ numpy同样可以通过<!--[广播机制](./broadcast.md) -->实现向量与矩�
 
 # 4.行向量与列向量
 
-根据前文可知，在2维数组中，行向量和列向量被区别对待。通常NumPy会尽可能使用单一类型的1维数组（例如，2维数组a的第j列a[:, j]是1维数组）。默认情况下，一维数组在2维操作中被视为行向量，因此，将矩阵乘行向量时，使用形状(n,)或(1,n)的向量结果一致。有多种方法可以从一维数组中得到列向量，但并不包括transpose：
-<img src = "/numpy-38.png" class = "h-70 mx-auto">
-
-<!-- ![](./img/numpy-38.png) -->
-
----
-
 ## 数组形状改变
 
 使用newaxis更新数组形状和索引可以将1维数组转化为2维列向量：
@@ -123,37 +96,6 @@ numpy同样可以通过<!--[广播机制](./broadcast.md) -->实现向量与矩�
 <!-- ![](./img/numpy-41.png) -->
 
 ---
-
-## 矩阵拼接
-
-图示操作仅适用于矩阵堆叠或向量堆叠，而一维数组和矩阵的混合堆叠只有通过vstack才可实现，hstack会导致维度不匹配错误。因为前文提到将一维数组作为行向量，而不是列向量。为此，可以将其转换为行向量，或使用专门的column_stack函数执行此操作：
-<img src = "/numpy-42.png" class = "h-90 mx-auto">
-<!-- ![](./img/numpy-42.png) -->
-
----
-
-## 矩阵拼接
-
-与stack对应的是split：
-<img src = "/numpy-42-1.png" class = "h-90 mx-auto">
-<!-- ![](./img/numpy-42-1.png) -->
-
----
-
-All split flavors accept either a list of indices to split at, or a single integer, the number of equal sized parts:
-<img src = "/numpy-43.png" class = "h-90 mx-auto">
-<!-- ![](./img/numpy-43.png) -->
-
----
-
-## 矩阵复制
-
-矩阵复制有两种方式：tile类似粘贴复制；repeat相当于分页打印。
-<img src = "/numpy-44.png" class = "h-90 mx-auto">
-<!-- ![](./img/numpy-44.png) -->
-
----
-
 ## 矩阵删除
 
 delete可以删除特定的行或列
@@ -172,7 +114,7 @@ delete可以删除特定的行或列
 
 ## 矩阵插入
 
-与hstack一样，append函数无法自动转置1D数组，因此需要重新调整向量形状或添加维数，或者使用column_stack：
+append函数无法自动转置1D数组，因此需要重新调整向量形状或添加维数，或者使用column_stack：
 <img src = "/numpy-47.png" class = "h-90 mx-auto">
 <!-- ![](./img/numpy-47.png) -->
 
@@ -241,52 +183,3 @@ np.amin等同于np.min，这样做同样是为了避免from numpy import *可能
 all和any同样也可作用于特定维度：
 <img src = "/numpy-56.png" class = "h-70 mx-auto">
 <!-- ![](./img/numpy-56.png) -->
-
----
-
-# 8.矩阵排序
-
-虽然在一维数组中，axis参数适用于不同函数，但在二维数组排序中影响较小：
-<img src = "/numpy-57.png" class = "h-90 mx-auto">
-<!-- ![](./img/numpy-57.png) -->
-
----
-
-## 排序
-
-你通常不需要上述这样的排序矩阵，axis不是key参数的替代。但好在NumPy提供了其他功能，这些功能允许按一列或几列进行排序：
-
-1、`a[a[:,0].argsort()]`表示按第一列对数组进行排序：
-<img src = "/numpy-59.png" class = "h-70 mx-auto">
-<!-- ![](./img/numpy-59.png) -->
-
-其中，argsort返回排序后的原始数组的索引数组。
-
----
-
-## 排序
-
-
-可以重复使用该方法，但千万不要搞混：
-
-
-a = a[a[:,2].argsort()]
-
-a = a[a[:,1].argsort(kind='stable')]
-
-a = a[a[:,0].argsort(kind='stable')]
-<img src = "/numpy-60.png" class = "h-70 mx-auto">
-<!-- ![](./img/numpy-60.png) -->
-
----
-
-## 排序
-
-2、函数lexsort可以像上述这样对所有列进行排序，但是它总是按行执行，并且排序的行是颠倒的（即从下到上），其用法如下：
-
-a[np.lexsort(np.flipud(a[2,5].T))]，首先按第2列排序，然后按第5列排序；a[np.lexsort(np.flipud(a.T))]，从左到右依次排序各列。
-<img src = "/numpy-61.png" class = "h-60 mx-auto">
-
-<!-- ![](./img/numpy-61.png) -->
-
-其中，flipud沿上下方向翻转矩阵（沿axis = 0方向，与a [::-1，...]等效，其中...表示“其他所有维度”），注意区分它与fliplr，fliplr用于1维数组。

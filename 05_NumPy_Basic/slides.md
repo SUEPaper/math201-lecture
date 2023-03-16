@@ -42,12 +42,5 @@ src: ./pages/vector.md
 src: ./pages/matrix.md
 ---
 
----
-src: ./pages/tensor.md
----
-
----
-src: ./pages/broadcast.md
----
 
 
