@@ -126,17 +126,4 @@ print('Done!')
 
 ```
 
----
-layout: full
----
-
-# for loop 循环
-
-```py
-
-for i in [5, 4, 3, 2, 1] :
-    print(i)
-print('Finished !!!')
-
-```
 
