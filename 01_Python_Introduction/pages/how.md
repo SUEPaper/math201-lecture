@@ -5,7 +5,193 @@ layout: center
 # (How)怎么学“任何东西”？
 
 ---
-transition: slide-left
+layout: full
+transition: slide-up
+---
+
+# 数值计算实训课绝大部分同学来说并不轻松
+
+不仅需要学习很多新知识, 在新环境中使用新工具
+
+还需要锻炼出**独立解决问题的意识和能力**
+
+更重要的是, **完成观念和心态上的转变**
+
+<v-clicks>
+
+* 我们与传统的课程大作业不同
+   * 需要自学很多东西
+   * 需要自学LaTeX，提交LaTeX报告（**一个数学系的学生不会LaTeX应该感到羞耻**）
+
+<br/>
+
+* 你遇到的所有问题(除了框架代码自身错误), 都是在锻炼你的能力
+    * 老师助教不会手把手帮你解决所有问题
+    * 独立解决这些问题, 是对你最大的训练
+
+</v-clicks>
+
+---
+layout: full
+transition: slide-up
+---
+
+# 专业世界观1 - 学术诚信
+
+<b text-sky font-900> [MIT对学术诚信的诠释](https://integrity.mit.edu/) </b>,   尤其是<b text-sky font-900>[关于写代码的学术诚信](http://integrity.mit.edu/handbook/writing-code) </b>
+
+<v-clicks>
+
+* <b text-orange>独立完成学习任务</b>
+* <b text-orange>在允许的范围内参考相关资料</b>
+* <b text-orange>不参考别人的代码, 不分享自己的代码</b>
+
+</v-clicks>
+
+<v-click>
+
+意义: 让你接受预期的训练, 锻炼出预期的能力
+
+**这是需要大家发自内心去认可和执行的**: 我们很难约束大家
+
+</v-click>
+
+<v-click>
+
+“凭什么不能参考别人的代码? 我都看懂了啊!”/“能抄对也是本事”
+
+* <b text-red>“看懂”和 “自己独立完成”的效果是天差地别的</b>
+    * 你表面上看到了做y能得到x, 但不知道原因z, 更不知道试错的uvw
+    * 你收获了肤浅的理解, 让你重做一遍, 很可能还是搞不定
+
+</v-click>
+
+---
+layout: full
+transition: slide-up
+---
+
+# 专业世界观2 - 大佬三连
+
+<v-clicks>
+
+<b text-orange font-900> STFW - Search The Friendly Web </b>
+
+* 只要我用的工具是大众的, 我几乎不可能是世界上第一个遇到问题的人
+* 网上一定有人遇到过相同/类似问题, 我应该搜一下看看他们怎么解决
+
+<br/>
+
+<b text-orange font-900> RTFM - Read The Friendly Manual </b>
+
+* 只要我用的工具是大众的, 应该有手册记录这个工具的所有细节
+* 如果我想了解它的某个问题, 我应该去搜索手册的描述
+
+<br/>
+
+<b text-orange font-900> RTFSC - Read The Friendly Source Code </b>
+
+* 只要我获得了项目代码, 理论上我就可以知晓它的一切行为
+* 如果我想了解它具体是如何工作的, 我应该去读一下(关键)代码
+
+<br/>
+
+如果你在提问时收到了这些回复, 其背后的含义是:
+
+* **你想要的答案很容易找到, 你很应该自己去获取**
+* **相比于我直接告诉你答案, 你自己获取答案能学到更多**
+
+</v-clicks>
+
+---
+layout: full
+transition: slide-up
+---
+
+# 专业世界观3 - 科学提问
+《[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)》/《[别像弱智一样提问](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)》
+
+* 提问能反映出你的学习态度: 主动尝试 vs. 被动依赖
+
+**不是所有问题都值得问**
+
+* 你以为自己热爱学习? 不, 别人只觉得你是伸手党
+
+开源社区中的一个真实案例:
+
+* 新手的提问: 两个不同的安装包有什么区别? <b text-sky font-900>我是新手</b>.
+* 开发者的回答: **自己上网找答案**. 在开源社区中**不应该随便问这种配置问题**, 除非你有明确的证据证明代码或者文档有缺陷.
+
+---
+layout: full
+transition: slide-up
+---
+
+# 鼓励的提问 vs. 不应该的提问
+
+* 鼓励的提问
+    * 心理辅导, 学习困惑等非具体技术问题
+        * 可以私戳老师助教, 时间充裕的话还可以线上聊聊
+    * bug report: 要有证据, 当一名专业的社区contributor
+    * 经过思考的高质量问题
+    * 属于训练环节, 但经历过合理尝试还无法解决的问题: [提问模板](https://ysyx.oscc.cc/docs/misc/ask.html)
+
+<br>
+
+* 不应该的提问 (背后含义: **你应该接受训练**)
+    * 没有看出合理尝试和思考的提问
+        * 可以不知道怎么尝试和思考, 但不代表可以跳过训练获得答案
+        * 接受训练: 方法 -> 看讲义总结归纳, 细节 -> RTFM/RTFSC
+    * 自己动手试试就能得到答案的提问
+
+
+---
+layout: full
+transition: slide-up
+---
+
+# 虚假的帮助 vs. 真实的帮助
+
+虚假的帮助: 面向结果, 解决当下问题优先
+
+真实的帮助: 面向能力, 领悟学习方法优先
+
+**本质区别: 如果将来不再提供帮助, 学生能否独立解决类似的问题?**
+
+真实案例: 学生A询问某报错信息
+
+* 分析: 根据提问内容, 学生A只进行了很少的尝试, 没有其他想法
+* 虚假的帮助: 学生B指出可能是代码里面有些模块有bug, 提示学生A去看看
+    * 学生A的收获是 “报错信息->something error”的表面因果关系, 难以深入理解和记忆, 并未学会真正思路和方法, 同时也错过一次锻炼机会
+* 真实的帮助: 引导学生A学会对bug进行深入的分析和定位
+    * **这比虚假的帮助困难得多, 大部分学生并不知道如何引导**
+
+---
+layout: full
+transition: slide-up
+---
+
+# 任何直接获得答案的做法都是在放弃训练的机会
+
+* 遇到一个总线的bug, 希望同学提供点思路
+    * 正确做法: RTFM, 确认自己正确理解细节; RTFSC, 梳理这个bug是如何出现的
+
+* 不知道算法应该放在哪里, 希望助教告知一个好的设计方案
+    * 正确做法: 自己尝试不同的方案, 然后总结它们的优劣
+
+* 希望助教/大佬能整理一本攻略手册
+    * 正确做法: 自己整理(作为学习成果), 但不要分享出去
+        * **这些攻略并不能真正帮助你学习, 而是在剥夺你接受训练的机会**
+
+* 阅读开源项目或者别人的案例
+    * 正确做法: 先尽力完成一个满意的设计, 再对比开源项目
+        * **缺少试错, 你无法理解 “为什么好, 为什么不好”**
+
+<b text-orange font-900> 躺平容易坚持难, 但如果你能坚持下来, 你就可以得到脱胎换骨的提升</b>
+
+---
+layout: full
+transition: slide-up
 ---
 
 # Prerequisistes
@@ -26,41 +212,10 @@ transition: slide-left
 
 </v-clicks>
 
----
-transition: slide-left
----
-
-# 学术诚信（Aacademic Integrity）
-
-[Aacademic Integrity](https://integrity.mit.edu/) 不是底线，而是“**自发的要求**”
-
-<br/>
-
-<v-click>
-
-对“不应该做的事情”有清楚的认识
-
-</v-click>
-
-<v-clicks>
-
-* <b text-orange>不将代码上传到互联网</b>
-* <b text-orange>主动不参考别人完成的实验代码</b>
-* <b text-orange>不使用他人测试用例(depends)</b>
-
-</v-clicks>
-
-<br/>
-<br/>
-
-<v-click>
-
-有些行为可能使你**得到分数**， 但**失去应有的训练**
-
-</v-click>
 
 ---
-transition: slide-left
+layout: full
+transition: slide-up
 ---
 
 # 成为一名计算机的Power User
@@ -87,7 +242,8 @@ transition: slide-left
 </v-clicks>
 
 ---
-transition: slide-left
+layout: full
+transition: slide-up
 ---
 
 # 成为一名计算机的Power User
@@ -113,7 +269,8 @@ transition: slide-left
 </v-clicks>
 
 ---
-transition: slide-left
+layout: full
+transition: slide-up
 ---
 
 # 学会写代码

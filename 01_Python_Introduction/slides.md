@@ -21,7 +21,7 @@ css: unocss
 
 数理学院数学系
 
-#### 邓化宇
+#### 纸上得来终觉浅
 
 <div class="abs-br m-6 flex gap-2">
   <a href="https://suepaper.github.io/math201/" target="_blank" alt="GitHub"
@@ -35,10 +35,6 @@ css: unocss
 </div>
 
 ---
-src: ./pages/course-infos.md
----
-
----
 src: ./pages/what.md
 ---
 
@@ -48,6 +44,10 @@ src: ./pages/why.md
 
 ---
 src: ./pages/how.md
+---
+
+---
+src: ./pages/other.md
 ---
 
 ---
